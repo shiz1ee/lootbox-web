@@ -1,0 +1,12 @@
+{
+  "name": "lootbox-web",
+  "version": "1.0.0",
+  "description": "My Lootbox - A Sui Dapp for opening loot boxes",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx http-server -p 8000"
+  },
+  "dependencies": {
+    "@mysten/sui.js": "^1.0.0"
+  }
+}

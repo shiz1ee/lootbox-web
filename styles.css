@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.wallet-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wallet-info {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wallet-info.hidden {
+    display: none;
+}
+
+.wallet-info p {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#walletAddress {
+    font-family: monospace;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: #333;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+.btn-large {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.lootbox-section {
+    margin: 30px 0;
+}
+
+.lootbox-card {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.lootbox-visual {
+    margin-bottom: 20px;
+}
+
+.box {
+    font-size: 4em;
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+.box.open {
+    animation: explode 0.6s ease-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.result {
+    background: #e8f5e9;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.result.hidden {
+    display: none;
+}
+
+.result h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.rarity-display {
+    font-size: 3em;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.rarity-common {
+    color: #4caf50;
+}
+
+.rarity-rare {
+    color: #2196f3;
+}
+
+.rarity-legendary {
+    color: #ff9800;
+}
+
+.result code {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: monospace;
+    word-break: break-all;
+    display: block;
+    margin: 10px 0;
+    font-size: 0.85em;
+}
+
+.result p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+}
+
+.loading.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.error {
+    background: #ffebee;
+    border: 2px solid #f44336;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #c62828;
+}
+
+.error.hidden {
+    display: none;
+}
+
+.info-section {
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.info-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-section ul {
+    list-style: none;
+    text-align: left;
+}
+
+.info-section li {
+    padding: 8px 0;
+    color: #555;
+}
+
+.info-section small {
+    color: #999;
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .box {
+        font-size: 2.5em;
+    }
+}
